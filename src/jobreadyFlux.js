@@ -1,16 +1,13 @@
-var React = require('react'),
-    Dispatcher = require('flux').Dispatcher,
-    EventEmitter = require('events').EventEmitter,
-    KeyMirror = require('keymirror');
+window = window || {};
 
-var JobreadyFlux = {
-  React: React,
-  Dispatcher: Dispatcher,
-  EventEmitter: EventEmitter,
-  KeyMirror: KeyMirror
+window.React = require('react');
+window.Dispatcher = require('flux').Dispatcher;
+window.EventEmitter = require('events').EventEmitter;
+window.KeyMirror = require('keymirror');
+
+module.exports = {
+  React: window.React,
+  Dispatcher: window.Dispatcher,
+  EventEmitter: window.EventEmitter,
+  KeyMirror: window.KeyMirror
 };
-
-if(window !== null) {
-  window.JobreadyFlux = JobreadyFlux;
-}
-module.exports = JobreadyFlux;
