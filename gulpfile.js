@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del');
 
-var appName = 'jobreadyFlux';
+var appName = 'reactFluxer';
 var appFile = appName + '.js';
 var appDistFile = appName + '.js';
 var appMinDistFile = appName + '.min.js';
@@ -16,7 +16,7 @@ gulp.task('build', function () {
   });
   browserify({
     entries: './src/' + appFile,
-    standalone: 'jobreadyFlux',
+    standalone: appName,
     extensions: ['.js'],
   })
   .bundle()
