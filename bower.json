@@ -1,0 +1,22 @@
+{
+  "name": "jobready-flux",
+  "version": "0.0.0",
+  "authors": [
+    "Damien Adermann <damiena@jobready.com.au>"
+  ],
+  "description": "A bundled implementation of flux",
+  "keywords": [
+    "Flux",
+    "React",
+    "Postal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../",
+    "test",
+    "tests"
+  ]
+}
