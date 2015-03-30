@@ -1,6 +1,5 @@
 {
   "name": "jobready-flux",
-  "version": "0.0.0",
   "authors": [
     "Damien Adermann <damiena@jobready.com.au>"
   ],
@@ -10,7 +9,7 @@
     "React",
     "Postal"
   ],
-  "main": "dist/reactFluxer.js",
+  "main": "dist/react-fluxer.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
