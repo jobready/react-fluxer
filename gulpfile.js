@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del');
 
-var appName = 'reactFluxer';
+var appName = 'react-fluxer';
 var appFile = appName + '.js';
 var appDistFile = appName + '.js';
 var appMinDistFile = appName + '.min.js';

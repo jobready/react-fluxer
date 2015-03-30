@@ -18,6 +18,11 @@
     "bower_components",
     "../",
     "test",
-    "tests"
+    "tests",
+    "example",
+    "tmp",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
   ]
 }
