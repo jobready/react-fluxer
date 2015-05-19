@@ -1,8 +1,8 @@
 {
-  "name": "jobready-flux",
-  "version": "0.0.0",
+  "name": "react-fluxer",
+  "version": "0.0.1",
   "description": "",
-  "main": "dist/jobreadyFlux.js",
+  "main": "src/react-fluxer.js",
   "dependencies": {
     "events": "^1.0.2",
     "flux": "^2.0.1",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jobready/jobready-flux"
+    "url": "git@github.com:jobready/react-fluxer"
   },
   "author": "Damien Adermann",
   "license": "Apache",
