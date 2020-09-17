@@ -10,26 +10,32 @@ var appFile = appName + '.js';
 var appDistFile = appName + '.js';
 var appMinDistFile = appName + '.min.js';
 
-gulp.task('build', function () {
-  del('dist/*.js', function(err, deletedFiles) {
-    console.log("Files deleted:",deletedFiles.join(', '));
-  });
+gulp.task('delete', () =>
+  new Promise((resolve, reject) =>
+    del('dist/*.js', (err, deletedFiles) => {
+      console.log("Files deleted:",deletedFiles.join(', '));
+      resolve();
+    })
+  )
+);
+
+gulp.task('build', gulp.series('delete', () =>
   browserify({
     entries: './src/' + appFile,
-    standalone: appName,
     extensions: ['.js'],
   })
   .bundle()
   .pipe(source(appDistFile))
-  .pipe(gulp.dest('dist'));
-});
+  .pipe(gulp.dest('dist'))
+));
 
-gulp.task('compress', ['build'], function() {
+
+gulp.task('compress', gulp.series('build', () =>
   gulp.src('dist/' + appDistFile)
   .pipe(uglify())
   .pipe(rename(appMinDistFile))
-  .pipe(gulp.dest('dist'));
-});
+  .pipe(gulp.dest('dist'))
+));
 
-gulp.task('default',['dist']);
-gulp.task('dist', ['build', 'compress']);
+gulp.task('dist', gulp.series('compress'));
+gulp.task('default', gulp.series('dist'));
